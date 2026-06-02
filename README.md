@@ -88,3 +88,17 @@ make re — Cleans all compiled files and recompiles the entire library from scr
 
 ## Resources
 
+Here is a curated list of resources, guides, and testers that helped me understand the concepts and validate my implementation of `libft`.
+
+### 📖 Understanding C & Libft Concepts
+* **[Ouroboros Libft Guide](https://github.com/0x050f/libft-guide)** - A comprehensive deep dive into every single function required by the mandatory part.
+* **[C Memory Management (GeeksforGeeks)](https://www.geeksforgeeks.org/memory-layout-of-c-program/)** - Essential reading to understand stack vs. heap, `malloc`, and `free`.
+* **[Linked Lists in C](https://www.learn-c.org/en/Linked_lists)** - A straightforward tutorial to grasp the bonus part of the project (structs and node manipulation).
+* **[Pointers in C](https://www.tutorialspoint.com/cprogramming/c_pointers.htm)** - A solid refresher on pointer arithmetic and double pointers (`char **`).
+
+### 🛠️ Testers & Unit Tests
+> ⚠️ **Warning:** Testers are great for finding edge cases, but always make sure you understand *why* your code failed. Don't just code to pass the testers!
+
+* **[Libftest (by Tripouille)](https://github.com/Tripouille/libftTester)** - One of the most popular and rigorous testers. Highly recommended for strict edge cases.
+* **[Libftest (by PLEB42)](https://github.com/PLEB42/libft-god)** - One of the most popular and rigorous testers. Highly recommended for strict edge cases.
+

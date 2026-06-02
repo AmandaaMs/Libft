@@ -6,7 +6,7 @@
 /*   By: amoura-d <amoura-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 14:48:56 by amoura-d          #+#    #+#             */
-/*   Updated: 2026/05/29 15:07:24 by amoura-d         ###   ########.fr       */
+/*   Updated: 2026/06/02 12:44:18 by amoura-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,28 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	char	*str;
 	size_t	start;
 	size_t	end;
+	size_t	i;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
-	end = ft_strlen(s1) - 1;
-	while (s1[start] != '\0' && ft_strchr(set, s1[start]) != NULL)
+	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	while (end > start && ft_strchr(set, s1[end]) != NULL)
+	end = ft_strlen(s1);
+	if (end == 0 || start >= end)
+		return (ft_strdup(""));
+	end--;
+	while (end > start && ft_strchr(set, s1[end]))
 		end--;
-	return (ft_substr(s1, start, (end - start + 1)));
+	str = malloc(end - start + 2);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (start <= end)
+		str[i++] = s1[start++];
+	str[i] = '\0';
+	return (str);
 }
-
-
