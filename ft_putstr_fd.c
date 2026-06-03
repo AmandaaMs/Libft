@@ -6,7 +6,7 @@
 /*   By: amoura-d <amoura-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 15:30:04 by amoura-d          #+#    #+#             */
-/*   Updated: 2026/05/29 15:33:32 by amoura-d         ###   ########.fr       */
+/*   Updated: 2026/06/03 08:21:17 by amoura-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	if (s == NULL)
+	if (!s)
 		return ;
 	write(fd, s, ft_strlen(s));
 }

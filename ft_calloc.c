@@ -6,7 +6,7 @@
 /*   By: amoura-d <amoura-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 09:20:50 by amoura-d          #+#    #+#             */
-/*   Updated: 2026/05/29 08:56:59 by amoura-d         ###   ########.fr       */
+/*   Updated: 2026/06/03 09:40:01 by amoura-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	total = nmemb * size;
 	res = malloc(total);
-	if (res == NULL)
+	if (!res)
 		return (NULL);
 	ft_bzero(res, total);
 	return (res);

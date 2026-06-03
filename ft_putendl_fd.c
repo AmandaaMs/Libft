@@ -6,7 +6,7 @@
 /*   By: amoura-d <amoura-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 15:34:46 by amoura-d          #+#    #+#             */
-/*   Updated: 2026/05/29 15:39:37 by amoura-d         ###   ########.fr       */
+/*   Updated: 2026/06/03 08:20:51 by amoura-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (s == NULL)
+	if (!s)
 		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);

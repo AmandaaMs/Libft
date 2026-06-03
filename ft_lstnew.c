@@ -6,7 +6,7 @@
 /*   By: amoura-d <amoura-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 09:35:27 by amoura-d          #+#    #+#             */
-/*   Updated: 2026/06/02 08:09:44 by amoura-d         ###   ########.fr       */
+/*   Updated: 2026/06/03 08:12:21 by amoura-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstnew(void *content)
 	t_list	*node;
 
 	node = malloc(sizeof(t_list));
-	if (node == NULL)
+	if (!node)
 		return (NULL);
 	node->content = content;
 	node->next = NULL;

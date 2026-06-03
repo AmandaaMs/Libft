@@ -6,7 +6,7 @@
 /*   By: amoura-d <amoura-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 10:13:35 by amoura-d          #+#    #+#             */
-/*   Updated: 2026/05/29 13:08:36 by amoura-d         ###   ########.fr       */
+/*   Updated: 2026/06/03 08:25:40 by amoura-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else if (len > s_len - start)
 		len = s_len - start;
 	org = ft_calloc((len + 1), sizeof(char));
-	if (org == NULL)
+	if (!org)
 		return (NULL);
 	ft_strlcpy(org, (s + start), (len + 1));
 	return (org);

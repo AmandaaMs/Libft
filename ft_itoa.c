@@ -6,7 +6,7 @@
 /*   By: amoura-d <amoura-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 16:38:35 by amoura-d          #+#    #+#             */
-/*   Updated: 2026/05/29 17:07:48 by amoura-d         ###   ########.fr       */
+/*   Updated: 2026/06/03 09:42:47 by amoura-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 	nbr = n;
 	len = get_len(nbr);
 	res = ft_calloc((len + 1), sizeof(char));
-	if (res == NULL)
+	if (!res)
 		return (NULL);
 	if (nbr == 0)
 		res[0] = '0';
